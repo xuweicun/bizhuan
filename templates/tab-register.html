@@ -1,31 +1,44 @@
 <ion-view style="" title="新用户注册">
     <ion-content class="has-header" scroll="false" overflow-scroll="true" padding="true">
-        <form style="" class="list">
-            <div class="row list">
-                <div class="col-75">
+        <form style="" name="registerForm" class="list" novalidate>
+            <ion-list style="">
+
                      <label class="item item-input">
                       <!--<i class="icon ion-ios-person placeholder-icon"></i>-->
                       <span class="input-label">手机号</span>
-                      <input type="number" placeholder="请输入手机号">
+                      <input type="tel" name="phone" ng-model="phone" required ng-minlength="11" ng-maxlength="11"  placeholder="请输入手机号">
+                      <span style="color: green;"><i class="icon ion-checkmark-circled" ng-show="registerForm.phone.$valid"></i></span>
+                      <span style="color: red; margin-right:2px;" ng-show="registerForm.phone.$dirty && registerForm.phone.$error.required">手机号不能为空<i class="icon ion-close-circled" ></i></span>
                     </label>
                   
-                </div>
-                <div class="col-25">
-                  <button class="item button button-positive" style="display:inline-block;text-align:center;width:100% !important;">获取验证码</button>
-                </div>
+
+            </ion-list>
+            <div class="row list" style="padding: 0px;">
+
+                    <div class="col-50">
+                        <label style="" class="item item-input">
+                            <span class="input-label">验证码</span>
+                            <input placeholder="请输入验证码" ng-model="yzm" name="yzm" required ng-maxlength="6" ng-minlength="6" type="text">
+                            <span style="color: green; margin-right: 2px;"><i class="icon ion-checkmark-circled" ng-show="registerForm.yzm.$valid"></i></span>
+                            <span style="color: red; margin-right:2px;" ng-show="registerForm.yzm.$dirty && registerForm.yzm.$error.required">验证码不能为空<i class="icon ion-close-circled" ></i></span>
+                        </label>
+                    </div>
+                    <div class="col-50">
+                        <button class="item button button-assertive" style="display:inline-block;text-align:center;width:100% !important;">获取验证码</button>
+                    </div>
+
             </div>
             <ion-list style="">
-                <label style="" class="item item-input">
-                    <span class="input-label">验证码</span>
-                    <input placeholder="请输入6位验证码" type="text">
-                </label>
+
                 <label style="" class="item item-input">
                     <span class="input-label">密码</span>
-                    <input placeholder="六位以上数字字母组合" type="password">
+                    <input placeholder="六位以上数字字母组合" ng-model="pwd" name="pwd" required ng-minlength="6"  type="password">
+                    <span style="color: green; margin-right:2px;"><i class="icon ion-checkmark-circled" ng-show="registerForm.pwd.$valid"></i></span>
+                    <span style="color: red; margin-right:2px;" ng-show="registerForm.pwd.$dirty && registerForm.pwd.$error.required">密码不能为空<i class="icon ion-close-circled" ></i></span>
                 </label>
             </ion-list>
             <div style="" class="button-bar"></div>
-            <button style="" class="button button-positive button-block ">注册</button>        
+            <button style="" class="button button-assertive button-block " ng-disabled="registerForm.$invalid">注册</button>
         </form>
         <form style="" class="list"></form>
     </ion-content>

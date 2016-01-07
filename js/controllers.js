@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
   $scope.chats = Chats;
   $scope.photoSlides = 0;
 })
-.controller('LoginCtrl', function($scope) {
+.controller('LoginCtrl', function($scope,$http) {
 
 })
 

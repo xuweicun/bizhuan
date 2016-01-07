@@ -8,13 +8,13 @@
                     <span class="input-label">手机号</span>
                     <input placeholder="请输入注册手机号" name="phone" type="tel"  ng-model="phone" required ng-minlength="11" ng-maxlength="11">
                     <span style="color: green;"><i class="icon ion-checkmark-circled" ng-show="loginForm.phone.$valid"></i></span>
-                    <span style="color: red; margin-right:2px;" ng-show="loginForm.phone.$dirty && loginForm.phone.$error.required">手机号不能为空<i class="icon ion-alert-circled" ></i></span>
+                    <span style="color: red; margin-right:2px;" ng-show="loginForm.phone.$dirty && loginForm.phone.$error.required">手机号不能为空<i class="icon ion-close-circled" ></i></span>
                 </label>
                 <label style="" name="pwd" class="item item-input">
                     <span class="input-label">密码</span>
                     <input placeholder="..........." type="password" name="pwd" ng-model="pwd" required ng-minlength="6" ng-maxlength="20">
                     <span style="color: green; margin-right:2px;"><i class="icon ion-checkmark-circled" ng-show="loginForm.pwd.$valid"></i></span>
-                    <span style="color: red; margin-right:2px;" ng-show="loginForm.pwd.$dirty && loginForm.pwd.$error.required">密码不能为空<i class="icon ion-alert-circled" ></i></span>
+                    <span style="color: red; margin-right:2px;" ng-show="loginForm.pwd.$dirty && loginForm.pwd.$error.required">密码不能为空<i class="icon ion-close-circled" ></i></span>
                 </label>
             </ion-list>
             <div style="height: 40px;" class="spacer"></div>
