@@ -1,0 +1,27 @@
+<ion-view hide-nav-bar="true">
+  <style type="text/css">
+    ion-slide > div{
+      height: 100%;
+      background-position: 50% 0;
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-size:cover;
+    }
+  </style>
+  <a class="button button-dark button-clear"  ui-sref="tab.dash"  style="position: absolute;top:10px;right:10px;z-index:99">关闭</a>
+  <ion-slide-box style="height: 100%">
+    <ion-slide>
+      <div class="box positive-bg" style="background-image: url(pic/1.jpg);"></div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box positive-bg" style="background-image: url(pic/2.jpg);"></div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box positive-bg" style="background-image: url(pic/3.jpg);"></div>
+    </ion-slide>
+    <ion-slide>
+      <div class="box positive-bg" style="background-image: url(pic/4.jpg); " ui-sref="tab.dash" ></div>
+
+    </ion-slide>
+  </ion-slide-box>
+</ion-view>
